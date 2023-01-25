@@ -41,7 +41,7 @@ const Navbar = () => {
               to="/faq"
               className={({ isActive }) => (isActive ? 'text-blue-500' : '')}
             >
-              FAQs
+              FAQ
             </NavLink>
           </li>
         </ul>
