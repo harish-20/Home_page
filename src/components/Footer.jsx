@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <div
-      className="flex flex-col min-h-screen  "
+      className="flex flex-col"
       style={{
         background: 'rgb(51,146,243)',
         color: 'rgb(255,255,255',

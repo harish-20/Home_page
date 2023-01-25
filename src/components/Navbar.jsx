@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -21,13 +21,13 @@ const Navbar = () => {
         className="flex"
         style={{ padding: '10px 20px', boxSizing: 'inherit', fontSize: '12px' }}
       >
-        <a href="#">
+        <Link to="/">
           <img
             className=" image"
             src="https://static-assets-web.flixcart.com/fk-sp-static/images/fk-logo-pre-login-v3.svg"
             style={{ boxSizing: 'inherit', height: '45px', width: '130px' }}
           ></img>
-        </a>
+        </Link>
         <ul
           className="u"
           style={{ display: 'flex', margin: 'auto 30px', fontSize: '15px' }}
@@ -35,7 +35,14 @@ const Navbar = () => {
           <li className="mx-9  cursor-pointer"></li>
           <li className="mx-2  my-2 cursor-pointer">Fee structure</li>
           <li className="mx-2  my-2 cursor-pointer"> Services</li>
-          <li className="mx-2  my-2 cursor-pointer">Resources</li>
+          <li className="mx-2  my-2 cursor-pointer">
+            <NavLink
+              to="/resource"
+              className={({ isActive }) => (isActive ? 'text-blue-500' : '')}
+            >
+              Resources
+            </NavLink>
+          </li>
           <li className="mx-2  my-2 cursor-pointer">
             <NavLink
               to="/faq"
