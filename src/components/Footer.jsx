@@ -168,7 +168,7 @@ const Footer = () => {
               margin: '0px 400px',
             }}
           >
-            ©2023 Flipcart.allrights reserved
+            ©2023 Flipkart.allrights reserved
           </span>
         </div>
       </div>
