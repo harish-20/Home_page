@@ -8,7 +8,6 @@ const Footer = () => {
         background: 'rgb(51,146,243)',
         color: 'rgb(255,255,255',
         font: '12px',
-        fontFamily: 'open Sans',
       }}
     >
       <div

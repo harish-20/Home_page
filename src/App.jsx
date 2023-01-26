@@ -9,6 +9,7 @@ import Footer from './components/Footer'
 // microfrontend components
 const FAQ = React.lazy(() => import('faq/FAQ'))
 const Resource = React.lazy(() => import('resource/Resource'))
+const Services = React.lazy(() => import('service/Services'))
 
 import './index.scss'
 
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/resource" element={<Resource />} />
+          <Route path="/services" element={<Services />} />
         </Routes>
       </Suspense>
       <Footer />

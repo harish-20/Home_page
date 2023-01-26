@@ -4,7 +4,7 @@ import { NavLink, Link } from 'react-router-dom'
 const Navbar = () => {
   return (
     <div
-      className="fixed z-0 flex-row bg-white"
+      className="fixed z-0 flex-row bg-white shadow-lg"
       style={{
         top: '0px',
         width: '100%',
@@ -34,7 +34,14 @@ const Navbar = () => {
         >
           <li className="mx-9  cursor-pointer"></li>
           <li className="mx-2  my-2 cursor-pointer">Fee structure</li>
-          <li className="mx-2  my-2 cursor-pointer"> Services</li>
+          <li className="mx-2  my-2 cursor-pointer">
+            <NavLink
+              to="/services"
+              className={({ isActive }) => (isActive ? 'text-blue-500' : '')}
+            >
+              Services
+            </NavLink>
+          </li>
           <li className="mx-2  my-2 cursor-pointer">
             <NavLink
               to="/resource"
@@ -48,7 +55,7 @@ const Navbar = () => {
               to="/faq"
               className={({ isActive }) => (isActive ? 'text-blue-500' : '')}
             >
-              FAQ
+              FAQs
             </NavLink>
           </li>
         </ul>
