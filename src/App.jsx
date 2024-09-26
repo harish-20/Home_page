@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
@@ -7,8 +7,9 @@ import Home from './pages/Home'
 import Footer from './components/Footer'
 
 // microfrontend components
-import FAQ from 'faq/FAQ'
-import Resource from 'resource/Resource'
+const FAQ = React.lazy(() => import('faq/FAQ'))
+const Resource = React.lazy(() => import('resource/Resource'))
+const Services = React.lazy(() => import('service/Services'))
 
 import './index.scss'
 
@@ -16,11 +17,20 @@ const App = () => {
   return (
     <BrowserRouter>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/faq" element={<FAQ />} />
-        <Route path="/resource" element={<Resource />} />
-      </Routes>
+      <Suspense
+        fallback={
+          <h1 className="mt-40 h-80 text-2xl text-blue-500 text-center font-semibold ">
+            Loading...
+          </h1>
+        }
+      >
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/resource" element={<Resource />} />
+          <Route path="/services" element={<Services />} />
+        </Routes>
+      </Suspense>
       <Footer />
     </BrowserRouter>
   )

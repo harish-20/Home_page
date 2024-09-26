@@ -48,7 +48,9 @@ module.exports = (_, argv) => ({
       filename: 'remoteEntry.js',
       remotes: {
         faq: 'faq@https://faq-mf-react.vercel.app/remoteEntry.js',
-        resource: 'resource@https://resourcepage-1bzr.vercel.app/remoteEntry.js'
+        resource:
+          'resource@https://resourcepage-1bzr.vercel.app/remoteEntry.js',
+        service: 'services@https://services-page-eta.vercel.app/remoteEntry.js',
       },
       exposes: {},
       shared: {

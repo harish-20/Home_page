@@ -8,7 +8,6 @@ const Footer = () => {
         background: 'rgb(51,146,243)',
         color: 'rgb(255,255,255',
         font: '12px',
-        fontFamily: 'open Sans',
       }}
     >
       <div
@@ -168,7 +167,7 @@ const Footer = () => {
               margin: '0px 400px',
             }}
           >
-            ©2023 Flipcart.allrights reserved
+            ©2023 Flipkart.allrights reserved
           </span>
         </div>
       </div>
